@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Feedly Background Open",
+  "description": "An extension to bring back the Google Reader shift+V: open in new tab in background shortcut",
+  "version": "0.1",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": ["jquery-2.0.3.min.map"],
+  "content_scripts": [
+    {
+      "matches": ["http://cloud.feedly.com/*"],
+      "js": ["jquery-2.0.3.js", "keyboard.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
