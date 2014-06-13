@@ -12,7 +12,7 @@
   "web_accessible_resources": ["jquery-2.0.3.min.map"],
   "content_scripts": [
     {
-      "matches": ["http://cloud.feedly.com/*"],
+      "matches": ["http://feedly.com/*"],
       "js": ["jquery-2.0.3.js", "keyboard.js"],
       "run_at": "document_end",
       "all_frames": true
